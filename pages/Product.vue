@@ -6,29 +6,40 @@
     />
     <div class="product">
       <LazyHydrate when-idle>
-        <Gallery :images="productGallery" class="product__gallery" />
+
+        <gallery :images="productGallery" class="product__gallery" />
       </LazyHydrate>
 
+      
+      
       <div class="product__info">
-        <div class="product__header">
-          <SfHeading
-            :title="productGetters.getName(product)"
-            :level="3"
-            class="sf-heading--no-underline sf-heading--left"
-          />
-          <SfIcon
-            icon="drag"
-            size="xxl"
-            color="var(--c-text-disabled)"
-            class="product__drag-icon smartphone-only"
-          />
-        </div>
-        <div class="product__price-and-rating">
-          <SfPrice
-            :regular="$n(productGetters.getPrice(product).regular, 'currency')"
-            :special="productGetters.getPrice(product).special && $n(productGetters.getPrice(product).special, 'currency')"
-          />
+        <SfSticky>
           <div>
+            <div class="product__header">
+              <SfHeading
+                :title="productGetters.getName(product)"
+                :level="3"
+                class="sf-heading--no-underline sf-heading--left"
+              />
+              <SfIcon
+                icon="drag"
+                size="xxl"
+                color="var(--c-text-disabled)"
+                class="product__drag-icon smartphone-only"
+              />
+            </div>
+
+            <p class="product__description desktop-only">
+              {{ description }}
+            </p>
+
+            <div class="product__price-and-rating">
+              <SfPrice
+                :regular="$n(productGetters.getPrice(product).regular, 'currency')"
+                :special="productGetters.getPrice(product).special && $n(productGetters.getPrice(product).special, 'currency')"
+              />
+            <div>
+              <SfButton class="sf-button--text">{{ $t('Read all reviews') }}</SfButton>
             <div class="product__rating">
               <SfRating
                 :score="averageRating"
@@ -38,16 +49,11 @@
                 ({{ totalReviews }})
               </a>
             </div>
-            <SfButton class="sf-button--text">{{ $t('Read all reviews') }}</SfButton>
           </div>
         </div>
+
+
         <div>
-          <p class="product__description desktop-only">
-            {{ description }}
-          </p>
-          <SfButton class="sf-button--text desktop-only product__guide">
-            {{ $t('Size guide') }}
-          </SfButton>
           <SfSelect
             v-e2e="'size-select'"
             v-if="options.size"
@@ -62,9 +68,10 @@
               :key="size.value"
               :value="size.value"
             >
-              {{size.label}}
+                {{size.label}}
             </SfSelectOption>
           </SfSelect>
+          
           <div v-if="options.color && options.color.length > 1" class="product__colors desktop-only">
             <p class="product__color-label">{{ $t('Color') }}:</p>
             <SfColor
@@ -123,15 +130,15 @@
             class="product__add-to-cart"
             @click="addToCart"
           />
-        </div>
+      </div>
 
-        <LazyHydrate when-idle>
+      <LazyHydrate when-idle>
           <SfTabs :open-tab="1" class="product__tabs">
             <SfTab title="Description">
               <div class="product__description">
-                {{ $t('Product description') }}
+                {{ description }}
               </div>
-              <SfProperty
+              <!-- <SfProperty
                 v-for="(property, i) in properties"
                 :key="i"
                 :name="property.name"
@@ -143,7 +150,7 @@
                     {{ property.value }}
                   </SfButton>
                 </template>
-              </SfProperty>
+              </SfProperty> -->
             </SfTab>
             <SfTab title="Read reviews">
               <SfReview
@@ -180,7 +187,12 @@
           </SfTabs>
         </LazyHydrate>
       </div>
-    </div>
+        </SfSticky>
+
+        </div>
+        </div>
+        
+    
 
     <LazyHydrate when-visible>
       <RelatedProducts

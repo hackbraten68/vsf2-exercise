@@ -1,6 +1,6 @@
-# theme
+# vsf2-exercise theme
 
-> My awesome Vue Storefront project
+> Storefront Challenge VSf2
 
 ## Build Setup
 
