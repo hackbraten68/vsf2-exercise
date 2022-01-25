@@ -1,32 +1,3 @@
-Skip to content
-Search or jump to…
-Pull requests
-Issues
-Marketplace
-Explore
- 
-@hackbraten68 
-hackbraten68
-/
-vue-storefront2-shopify
-Private
-Code
-Issues
-Pull requests
-Actions
-Projects
-Security
-Insights
-Settings
-vue-storefront2-shopify/ct-storefront/components/Gallery.vue
-@hackbraten68
-hackbraten68 fixed gallery bug & added sticky
-Latest commit 7f832e3 2 hours ago
- History
- 2 contributors
-@FaSe22@hackbraten68
-332 lines (330 sloc)  9.13 KB
-   
 <template>
   <div class="sf-gallery">
     <div class="sf-gallery__stage">
