@@ -1,5 +1,6 @@
 <template>
   <div id="home">
+
     <LazyHydrate when-idle>
       <SfHero class="hero">
         <SfHeroItem

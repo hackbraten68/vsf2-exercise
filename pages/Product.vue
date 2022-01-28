@@ -13,7 +13,7 @@
       
       
       <div class="product__info">
-        <SfSticky>
+      <SfSticky>
           <div>
             <div class="product__header">
               <SfHeading

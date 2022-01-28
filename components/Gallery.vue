@@ -12,6 +12,7 @@
               @mousemove="moveZoom($event, index)"
               @mouseout="removeZoom(index)"
             >
+            <!-- 3 Large Images added in hardcode for showcasing sticky product_info component -->
               <SfImage
                 ref="sfGalleryBigImage"
                 class="sf-gallery__big-image"
@@ -64,6 +65,9 @@
         </div>
       </transition>
     </div>
+
+    <!-- 4 additional Thumbnails has been added in hardcode -->
+
     <div class="sf-gallery__thumbs">
       <slot name="thumbs" v-bind="{ images, active: activeIndex, go }">
         <SfButton
