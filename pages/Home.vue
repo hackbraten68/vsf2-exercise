@@ -1,6 +1,15 @@
 <template>
   <div id="home">
 
+    <SfNotification
+      visible
+      persistent=""
+      title=""
+      message="This theme has been customized; go to: Category -> Product Page to see the changes"
+      action=""
+      type="info"
+    />
+   
     <LazyHydrate when-idle>
       <SfHero class="hero">
         <SfHeroItem
@@ -106,6 +115,7 @@
 </template>
 <script>
 import {
+  SfNotification,
   SfHero,
   SfBanner,
   SfCallToAction,
@@ -133,6 +143,7 @@ export default {
   }),
   components: {
     InstagramFeed,
+    SfNotification,
     SfHero,
     SfBanner,
     SfCallToAction,
