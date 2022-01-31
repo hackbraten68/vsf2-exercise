@@ -75,6 +75,7 @@ export default {
 
 <style lang="scss">
 @import "~@storefront-ui/vue/styles";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
 
 #layout {
   box-sizing: border-box;
@@ -82,6 +83,11 @@ export default {
     max-width: 1240px;
     margin: auto;
   }
+}
+
+:root {
+  --font-family--primary: "Montserrat", serif;
+  --font-family--secondary: "Poppins", sans-serif;
 }
 
 .no-scroll {
