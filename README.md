@@ -2,15 +2,15 @@
 
 > Vue.js/Storefront 2 with CommerceTool Integration
 
-### CHANGELOG
-
+## CHANGELOG
+``` bash
 - Pri-/Sec Fonts have been changed to Poppins & Montserrat
 - Product Info Component customizations
 - Three more Thumbnails added to PDP
 - For showcasing added two more large images in PDP
 - Added sticky behavior to Product Info Component
 - Added hardcoded Custom Component to PDP 
-
+```
 ## Build Setup
 
 ``` bash
