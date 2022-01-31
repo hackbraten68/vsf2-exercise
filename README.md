@@ -1,6 +1,10 @@
 # vsf2-exercise theme
 
-> Storefront Challenge VSf2
+> Vue.js/Storefront 2 with CommerceTool Integration
+
+## CHANGELOG
+
+> 
 
 ## Build Setup
 
