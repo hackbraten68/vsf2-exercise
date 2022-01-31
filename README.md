@@ -9,7 +9,7 @@
 - Three more Thumbnails added to PDP
 - For showcasing added two more large images in PDP
 - Added sticky behavior to Product Info Component
-- Added hardcoded Custom Component to PDP 
+- Added hardcoded Custom Component to Home.vue 
 ```
 ## Build Setup
 
